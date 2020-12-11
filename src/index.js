@@ -4,9 +4,32 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import Amplify from 'aws-amplify'
-import aws_exports from './aws-exports'
+import awsconfig from './aws-exports'
 
-Amplify.configure(aws_exports)
+const isLocalhost = Boolean(
+  window.location.hostname === 'localhost' ||
+    // [::1] is the IPv6 localhost address.
+
+    window.location.hostname === '[::1]' ||
+    // 127.0.0.0/8 are considered localhost for IPv4.
+
+    window.location.hostname.match(
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+    )
+)
+
+const signInURI = awsconfig.oauth.redirectSignIn.split(',')
+const signOutURI = awsconfig.oauth.redirectSignOut.split(',')
+
+if (isLocalhost) {
+  awsconfig.oauth.redirectSignIn = signInURI[1]
+  awsconfig.oauth.redirectSignOut = signOutURI[1]
+} else {
+  awsconfig.oauth.redirectSignIn = signInURI[0]
+  awsconfig.oauth.redirectSignOut = signOutURI[0]
+}
+
+Amplify.configure(awsconfig)
 
 ReactDOM.render(
   <React.StrictMode>

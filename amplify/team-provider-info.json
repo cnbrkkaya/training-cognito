@@ -13,7 +13,9 @@
     },
     "categories": {
       "auth": {
-        "trainingcognito16eb0a3b": {}
+        "trainingcognito16eb0a3b": {
+          "facebookAppId": "115734260286802"
+        }
       }
     }
   }
