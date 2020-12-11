@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-trainingcognito-dev-60300-authRole",
+      "UnauthRoleArn": "arn:aws:iam::114693697227:role/amplify-trainingcognito-dev-60300-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::114693697227:role/amplify-trainingcognito-dev-60300-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-trainingcognito-dev-60300-deployment",
+      "UnauthRoleName": "amplify-trainingcognito-dev-60300-unauthRole",
+      "StackName": "amplify-trainingcognito-dev-60300",
+      "StackId": "arn:aws:cloudformation:us-east-1:114693697227:stack/amplify-trainingcognito-dev-60300/70d893a0-3ba0-11eb-ad66-1226ff6bb471",
+      "AmplifyAppId": "d2zwsu10pcqjz4"
+    },
+    "categories": {
+      "auth": {
+        "trainingcognito16eb0a3b": {}
+      }
+    }
+  }
+}
